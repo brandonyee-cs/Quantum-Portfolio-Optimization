@@ -1,0 +1,54 @@
+{
+    "experiment_type": "sector",
+    "timestamp": "2025-02-28T16:45:00Z",
+    "parameters": {
+      "n_assets": 10,
+      "n_repetitions": 3,
+      "target_return": 0.11
+    },
+    "sector_constraints": {
+      "Technology": {"min": 0.20, "max": 0.40},
+      "Financials": {"min": 0.15, "max": 0.35},
+      "Healthcare": {"min": 0.10, "max": 0.30},
+      "Consumer Discretionary": {"min": 0.05, "max": 0.25},
+      "Communication Services": {"min": 0.05, "max": 0.20}
+    },
+    "classical_results": {
+      "status": "optimal",
+      "weights": [0.15, 0.10, 0.10, 0.15, 0.20, 0.15, 0.05, 0.05, 0.05, 0.0],
+      "portfolio_return": 0.113,
+      "portfolio_risk": 0.142,
+      "sharpe_ratio": 0.796,
+      "computation_time": 1.923,
+      "sector_allocation": {
+        "Technology": 0.25,
+        "Financials": 0.30,
+        "Healthcare": 0.15,
+        "Consumer Discretionary": 0.10,
+        "Communication Services": 0.15
+      },
+      "constraints_satisfied": true
+    },
+    "quantum_results": {
+      "weights": [0.18, 0.07, 0.12, 0.13, 0.17, 0.18, 0.03, 0.07, 0.05, 0.0],
+      "portfolio_return": 0.115,
+      "portfolio_risk": 0.145,
+      "sharpe_ratio": 0.793,
+      "computation_time": 5.274,
+      "sector_allocation": {
+        "Technology": 0.25,
+        "Financials": 0.25,
+        "Healthcare": 0.18,
+        "Consumer Discretionary": 0.12,
+        "Communication Services": 0.13
+      },
+      "constraints_satisfied": true
+    },
+    "comparison": {
+      "return_difference_pct": 1.77,
+      "risk_difference_pct": 2.11,
+      "sharpe_difference_pct": -0.38,
+      "weight_correlation": 0.953,
+      "speedup_factor": 0.365
+    }
+  }

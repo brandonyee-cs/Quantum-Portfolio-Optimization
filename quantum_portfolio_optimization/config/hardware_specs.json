@@ -1,0 +1,73 @@
+{
+    "simulators": {
+      "statevector": {
+        "max_qubits": 20,
+        "precision": "double",
+        "gpu_acceleration": false,
+        "parallel_threads": 4
+      },
+      "tensor_network": {
+        "max_qubits": 30,
+        "max_bond_dimension": 32,
+        "cutoff": 1e-10
+      },
+      "noise_model": {
+        "gate_errors": {
+          "single_qubit": {
+            "depolarizing_probability": 0.001,
+            "t1": 50000,
+            "t2": 70000
+          },
+          "two_qubit": {
+            "depolarizing_probability": 0.01,
+            "t1": 50000,
+            "t2": 70000
+          }
+        },
+        "readout_errors": {
+          "p_0_given_1": 0.03,
+          "p_1_given_0": 0.03
+        }
+      }
+    },
+    "cloud_services": {
+      "quantum_annealing": {
+        "provider": "d-wave",
+        "device": "Advantage_system4.1",
+        "qubits": 5000,
+        "connectivity": "Pegasus",
+        "max_variables": 177,
+        "typical_runtime_seconds": 10,
+        "api_endpoint": "https://cloud.dwavesys.com/sapi/",
+        "auth_token": "PLACEHOLDER"
+      },
+      "gate_based": {
+        "provider": "ibm_quantum",
+        "device": "ibmq_jakarta",
+        "qubits": 7,
+        "basis_gates": ["id", "rz", "sx", "x", "cx", "reset"],
+        "gate_errors": {
+          "single_qubit": 0.001,
+          "two_qubit": 0.01
+        },
+        "t1": 100000,
+        "t2": 80000,
+        "readout_error": 0.02,
+        "api_endpoint": "https://auth.quantum-computing.ibm.com/api",
+        "auth_token": "PLACEHOLDER"
+      }
+    },
+    "local_hardware": {
+      "cpu": {
+        "threads": 8,
+        "memory_gb": 16,
+        "parallel_simulations": 4
+      },
+      "gpu": {
+        "available": false,
+        "model": "PLACEHOLDER",
+        "memory_gb": 0,
+        "cuda_cores": 0
+      }
+    }
+  }

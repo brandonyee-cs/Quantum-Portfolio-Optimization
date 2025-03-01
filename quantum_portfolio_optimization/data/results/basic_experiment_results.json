@@ -1,0 +1,32 @@
+{
+    "experiment_type": "basic",
+    "timestamp": "2025-02-28T10:30:00Z",
+    "parameters": {
+      "n_assets": 5,
+      "target_return": 0.085,
+      "n_bits": 3,
+      "n_repetitions": 3
+    },
+    "classical_results": {
+      "status": "optimal",
+      "weights": [0.15, 0.25, 0.05, 0.35, 0.20],
+      "portfolio_return": 0.087,
+      "portfolio_risk": 0.135,
+      "sharpe_ratio": 0.644,
+      "computation_time": 0.045
+    },
+    "quantum_results": {
+      "weights": [0.18, 0.22, 0.08, 0.32, 0.20],
+      "portfolio_return": 0.089,
+      "portfolio_risk": 0.142,
+      "sharpe_ratio": 0.627,
+      "computation_time": 1.254
+    },
+    "comparison": {
+      "return_difference_pct": 2.3,
+      "risk_difference_pct": 5.2,
+      "sharpe_difference_pct": -2.6,
+      "weight_correlation": 0.925,
+      "speedup_factor": 0.036
+    }
+  }

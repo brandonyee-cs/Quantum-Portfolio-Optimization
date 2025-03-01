@@ -1,0 +1,26 @@
+{
+    "experiment_type": "scaling",
+    "timestamp": "2025-02-28T18:30:00Z",
+    "parameters": {
+      "asset_range": [5, 10, 15, 20, 25, 30],
+      "n_bits": 3,
+      "n_repetitions": 3
+    },
+    "scaling_results": {
+      "classical_times": [0.043, 0.186, 0.547, 1.295, 2.731, 5.842],
+      "quantum_times": [1.247, 2.315, 3.652, 5.124, 6.912, 8.947],
+      "hybrid_times": [1.187, 1.473, 1.982, 2.654, 3.427, 4.315],
+      "classical_risks": [0.135, 0.124, 0.118, 0.112, 0.107, 0.103],
+      "quantum_risks": [0.142, 0.128, 0.119, 0.114, 0.109, 0.105],
+      "hybrid_risks": [0.139, 0.126, 0.117, 0.113, 0.108, 0.104]
+    },
+    "scaling_analysis": {
+      "classical_exponent": 2.87,
+      "quantum_exponent": 0.89,
+      "classical_coefficient": 0.00178,
+      "quantum_coefficient": 0.75362,
+      "crossover_point": 43,
+      "speedup_at_50_assets": 1.78,
+      "speedup_at_100_assets": 4.32
+    }
+  }

@@ -1,0 +1,57 @@
+{
+    "algorithms": {
+      "qubo": {
+        "penalty_coefficients": {
+          "return": 10.0,
+          "budget": 10.0,
+          "cardinality": 5.0
+        },
+        "encoding_bits": 3,
+        "normalization": true
+      },
+      "vqe": {
+        "initial_point_style": "random",
+        "maxiter": 100,
+        "tol": 1e-5,
+        "lambda_val": 1.0,
+        "layers": 2
+      },
+      "qaoa": {
+        "p": 2,
+        "shots": 1024,
+        "maxiter": 100,
+        "tol": 1e-5
+      },
+      "amplitude_estimation": {
+        "evaluation_qubits": 5,
+        "shots": 1024
+      },
+      "hybrid": {
+        "time_threshold": 5.0,
+        "accuracy_threshold": 0.05,
+        "clustering_method": "hierarchical"
+      }
+    },
+    "portfolio": {
+      "default_risk_free_rate": 0.03,
+      "default_min_weight": 0.01,
+      "default_max_weight": 0.25,
+      "default_target_return": null,
+      "weight_precision": 0.001,
+      "min_weight_threshold": 1e-6
+    },
+    "simulation": {
+      "default_shots": 1024,
+      "max_qubits": 20,
+      "use_noise_model": false,
+      "error_mitigation": false
+    },
+    "experiments": {
+      "default_repetitions": 3,
+      "seed": 42,
+      "save_results": true,
+      "plot_results": true,
+      "result_directory": "../data/results/",
+      "timeout_seconds": 300
+    }
+  }

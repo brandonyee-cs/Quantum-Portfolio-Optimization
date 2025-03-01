@@ -1,0 +1,127 @@
+{
+    "default": {
+      "weight_constraints": {
+        "min_weight": 0.01,
+        "max_weight": 0.25
+      },
+      "sector_constraints": {},
+      "cardinality_constraint": null,
+      "risk_constraints": {
+        "max_volatility": null,
+        "max_var_95": null,
+        "max_drawdown": null
+      },
+      "objective": "sharpe",
+      "risk_free_rate": 0.03
+    },
+    "balanced": {
+      "description": "Balanced portfolio with sector diversification",
+      "weight_constraints": {
+        "min_weight": 0.02,
+        "max_weight": 0.20
+      },
+      "sector_constraints": {
+        "Technology": {"min": 0.15, "max": 0.35},
+        "Financials": {"min": 0.10, "max": 0.30},
+        "Healthcare": {"min": 0.10, "max": 0.25},
+        "Consumer Discretionary": {"min": 0.05, "max": 0.20},
+        "Communication Services": {"min": 0.05, "max": 0.15},
+        "Consumer Staples": {"min": 0.05, "max": 0.15}
+      },
+      "cardinality_constraint": 10,
+      "risk_constraints": {
+        "max_volatility": 0.15,
+        "max_var_95": 0.08,
+        "max_drawdown": 0.25
+      },
+      "objective": "sharpe",
+      "risk_free_rate": 0.03
+    },
+    "growth": {
+      "description": "Growth-focused portfolio with higher risk tolerance",
+      "weight_constraints": {
+        "min_weight": 0.01,
+        "max_weight": 0.30
+      },
+      "sector_constraints": {
+        "Technology": {"min": 0.25, "max": 0.50},
+        "Consumer Discretionary": {"min": 0.10, "max": 0.35},
+        "Communication Services": {"min": 0.10, "max": 0.30}
+      },
+      "cardinality_constraint": 8,
+      "risk_constraints": {
+        "max_volatility": 0.25,
+        "max_var_95": 0.12,
+        "max_drawdown": 0.35
+      },
+      "objective": "return",
+      "risk_free_rate": 0.03
+    },
+    "income": {
+      "description": "Income-focused portfolio with dividend priority",
+      "weight_constraints": {
+        "min_weight": 0.03,
+        "max_weight": 0.15
+      },
+      "sector_constraints": {
+        "Financials": {"min": 0.20, "max": 0.40},
+        "Utilities": {"min": 0.10, "max": 0.30},
+        "Real Estate": {"min": 0.10, "max": 0.30},
+        "Consumer Staples": {"min": 0.10, "max": 0.25}
+      },
+      "cardinality_constraint": 12,
+      "risk_constraints": {
+        "max_volatility": 0.12,
+        "max_var_95": 0.06,
+        "max_drawdown": 0.20
+      },
+      "objective": "sharpe",
+      "risk_free_rate": 0.03,
+      "additional_objectives": {
+        "dividend_yield": 0.5
+      }
+    },
+    "high_dimensional": {
+      "description": "Large portfolio with many assets",
+      "weight_constraints": {
+        "min_weight": 0.005,
+        "max_weight": 0.10
+      },
+      "sector_constraints": {},
+      "cardinality_constraint": 20,
+      "risk_constraints": {
+        "max_volatility": 0.18,
+        "max_var_95": 0.09,
+        "max_drawdown": 0.30
+      },
+      "objective": "risk",
+      "risk_free_rate": 0.03
+    },
+    "quantum_advantage": {
+      "description": "Portfolio designed to demonstrate quantum advantage",
+      "weight_constraints": {
+        "min_weight": 0.02,
+        "max_weight": 0.10
+      },
+      "sector_constraints": {
+        "Technology": {"min": 0.20, "max": 0.40},
+        "Financials": {"min": 0.15, "max": 0.35},
+        "Healthcare": {"min": 0.10, "max": 0.30},
+        "Consumer Discretionary": {"min": 0.05, "max": 0.25},
+        "Communication Services": {"min": 0.05, "max": 0.20}
+      },
+      "cardinality_constraint": 15,
+      "risk_constraints": {
+        "max_volatility": 0.20,
+        "max_var_95": 0.10,
+        "max_drawdown": 0.30
+      },
+      "objective": "custom",
+      "custom_objective": {
+        "sharpe_weight": 0.6,
+        "diversity_weight": 0.3,
+        "varcvar_weight": 0.1
+      },
+      "risk_free_rate": 0.03
+    }
+  }

@@ -1,0 +1,37 @@
+{
+    "experiment_type": "cardinality",
+    "timestamp": "2025-02-28T14:15:00Z",
+    "parameters": {
+      "n_assets": 10,
+      "max_assets": 3,
+      "target_return": 0.12,
+      "n_bits": 3,
+      "n_repetitions": 3
+    },
+    "classical_results": {
+      "status": "optimal",
+      "weights": [0.0, 0.0, 0.45, 0.0, 0.0, 0.0, 0.0, 0.0, 0.35, 0.20],
+      "portfolio_return": 0.124,
+      "portfolio_risk": 0.159,
+      "sharpe_ratio": 0.780,
+      "computation_time": 2.347,
+      "selected_assets": [2, 8, 9],
+      "num_assets": 3
+    },
+    "quantum_results": {
+      "weights": [0.0, 0.0, 0.40, 0.0, 0.0, 0.0, 0.0, 0.0, 0.40, 0.20],
+      "portfolio_return": 0.127,
+      "portfolio_risk": 0.163,
+      "sharpe_ratio": 0.779,
+      "computation_time": 3.621,
+      "selected_assets": [2, 8, 9],
+      "num_assets": 3
+    },
+    "comparison": {
+      "return_difference_pct": 2.42,
+      "risk_difference_pct": 2.52,
+      "sharpe_difference_pct": -0.13,
+      "weight_correlation": 0.989,
+      "speedup_factor": 0.648
+    }
+  }

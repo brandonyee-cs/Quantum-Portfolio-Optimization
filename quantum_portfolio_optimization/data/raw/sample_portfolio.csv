@@ -1,0 +1,16 @@
+Ticker,Sector,Weight,ExpectedReturn,Volatility
+AAPL,Technology,0.15,0.12,0.22
+MSFT,Technology,0.12,0.10,0.20
+AMZN,Consumer Discretionary,0.08,0.15,0.28
+GOOGL,Communication Services,0.10,0.11,0.24
+BRK.B,Financials,0.07,0.08,0.15
+JNJ,Healthcare,0.09,0.07,0.14
+JPM,Financials,0.06,0.09,0.18
+PG,Consumer Staples,0.08,0.06,0.12
+V,Financials,0.07,0.11,0.19
+UNH,Healthcare,0.05,0.09,0.16
+HD,Consumer Discretionary,0.04,0.10,0.18
+BAC,Financials,0.03,0.08,0.22
+MA,Financials,0.02,0.12,0.20
+PFE,Healthcare,0.02,0.07,0.16
+CSCO,Technology,0.02,0.08,0.17
